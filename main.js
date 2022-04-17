@@ -32,7 +32,10 @@ function makeRandomNum(){
 
 function play(){
     const userValue = userInput.value;
-
+    if(isNaN(userValue)){
+        resultArea.textContent = '숫자를 입력하세요.';
+        return;
+    }
     if(userValue < 1 || userValue > 100){
         resultArea.textContent = '잘못된 값을 입력하였습니다.';
         return;
@@ -76,8 +79,8 @@ function reset(){
     gameOver = false;
     playButton.disabled = false;
     chance = 5;
-    chanceArea.innerHTML = `남은 도전 기회: ${chances}`;
+    chanceArea.innerHTML = `남은 도전 기회: ${chance}`;
     userValueHistory = [];
-    resultArea.textContent = '새로운 게임을 시작합니다!';
+    resultArea.innerHTML = '새로운 게임을 시작합니다!';
 }
 makeRandomNum();
