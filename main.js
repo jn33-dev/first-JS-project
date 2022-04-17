@@ -73,8 +73,8 @@ function reset(){
     makeRandomNum();
     gameOver = false;
     playButton.disabled = false;
-    chances = 5;
-    chanceArea.innerHTML = `남은 도전 기회:${chances}`;
-    userValueList = [];
+    chance = 5;
+    chanceArea.innerHTML = `남은 도전 기회: ${chances}`;
+    userValueHistory = [];
 }
 makeRandomNum();

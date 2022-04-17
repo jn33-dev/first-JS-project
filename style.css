@@ -9,9 +9,3 @@
 .text-line{
     text-decoration: none;
 }
-
-
-@media screen and (max-width:48rem){
-    .line{
-      text-align:center;
-    }
