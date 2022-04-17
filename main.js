@@ -78,5 +78,6 @@ function reset(){
     chance = 5;
     chanceArea.innerHTML = `남은 도전 기회: ${chances}`;
     userValueHistory = [];
+    resultArea.textContent = '새로운 게임을 시작합니다!';
 }
 makeRandomNum();
