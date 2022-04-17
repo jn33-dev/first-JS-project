@@ -18,7 +18,8 @@ let userInput = document.getElementById('user-input');
 let playButton = document.getElementById('button-go');
 let resetButton = document.getElementById('button-reset');
 
-chanceArea.innerHTML = `남은 도전 기회: ${chance}`
+chanceArea.innerHTML = `남은 도전 기회: ${chance}`;
+resultArea.innerHTML = '게임을 시작하세요!';
 playButton.addEventListener('click',play);
 resetButton.addEventListener('click',reset);
 userInput.addEventListener('focus', focusInput);
@@ -60,6 +61,7 @@ function play(){
     }
     if(gameOver == true){
         playButton.disabled = true;
+        resultArea.textContent = 'RESET을 눌러 게임을 시작하세요!';
     }
 }
 
